@@ -10,7 +10,7 @@
                 Edit New Post
             </h1>
 
-            <form action="{{ route('post.update',$post->id) }}" method="POST" class="space-y-6">
+            <form action="{{ route('posts.update',$post->id) }}" method="POST" class="space-y-6">
                 @csrf
                 @method("put")
 

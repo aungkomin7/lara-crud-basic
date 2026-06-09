@@ -12,7 +12,7 @@
                     Posts
                 </h1>
 
-                <a href="{{ route('post.create') }}"
+                <a href="{{ route('posts.create') }}"
                     class="px-5 py-3 bg-indigo-600 text-white rounded-xl font-semibold hover:bg-indigo-700 transition">
                     + Create Post
                 </a>
@@ -48,17 +48,17 @@
                             </span>
 
                             <div class="flex gap-3">
-                                <a href="{{ route('post.show', $post->id) }}"
+                                <a href="{{ route('posts.show', $post->id) }}"
                                     class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600">
                                     See More
                                 </a>
 
-                                <a href="{{ route('post.edit', $post->id) }}"
+                                <a href="{{ route('posts.edit', $post->id) }}"
                                     class="px-4 py-2 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600">
                                     Edit
                                 </a>
 
-                                <form action="{{ route('post.destroy', $post->id) }}" method="POST">
+                                <form action="{{ route('posts.destroy', $post->id) }}" method="POST">
                                     @csrf
                                     @method('DELETE')
 
@@ -83,6 +83,15 @@
                     </div>
                 @endforelse
             </div>
+
+            {{-- <div class="container">
+                @foreach ($users as $user)
+                    {{ $user->name }}
+                @endforeach
+            </div> --}}
+
+            {{-- {{ $posts->links() }} --}}
+            {{ $posts->onEachSide(5)->links() }}
 
         </div>
     </div>

@@ -8,7 +8,7 @@
 
             <!-- Home Button -->
             <div class="mb-6">
-                <a href="{{ route('post.index') }}"
+                <a href="{{ route('posts.index') }}"
                     class="inline-flex items-center px-5 py-3 bg-indigo-600 text-white font-medium rounded-xl shadow hover:bg-indigo-700 transition">
                     ← Home
                 </a>
